@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -13,16 +14,16 @@
       <header class="header__caption">
         <span class="header__logo">Cahee</span>
         <nav class="header__nav">
-          <a href="#" class="nav__link">home</a>
-          <a href="#" class="nav__link">about</a>
-          <a href="#" class="nav__link">services</a>
-          <a href="#" class="nav__link">gallery</a>
-          <a href="#" class="nav__link">blog</a>
-          <a href="#" class="nav__link">contact</a>
+          <a href="#home" class="nav__link">home</a>
+          <a href="#about" class="nav__link">about</a>
+          <a href="#services" class="nav__link">services</a>
+          <a href="#gallery" class="nav__link">gallery</a>
+          <a href="#blog" class="nav__link">blog</a>
+          <a href="#contact" class="nav__link">contact</a>
         </nav>
       </header>
-      <div class="fresh-life">
-        <h2 class="caption">Fresh Life</h2>
+      <div class="fresh-life id="home"">
+        <h2 class="fresh-caption">Fresh Life</h2>
         <p class="fresh-life__text">
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco.
@@ -31,17 +32,18 @@
           get free now
         </button>
       </div>
-      <div class="mouse-wrapper">
-      <img src="images/4.png" alt="" class="mouse"></div>
+      <a class="mouse-wrapper" href="#about">
+        <img src="images/4.png" alt="" class="mouse">
+      </a>
       </div>
     </div>
-    <div class="about-us">
+    <div class="about-us" id="about">
       <div class="about-us__inner-wrapper">
         <div class="about-us__picture">
-          <img src="images/2.png" alt="" class="about-us__picture-img">
+          <img src="images/2.png" alt="" class="about-us__picture-img big-pic">
         </div>
         <div class="about-us__text">
-          <h2 class="caption">About Us</h2>
+          <h2 class="caption about-caption">About Us</h2>
           <p class="about-text">Abore Cahee magna aliqua.
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
            nisi ut aliquip ex ea commodo consequat.Duis aute irure
@@ -54,7 +56,7 @@
         </div>
     </div>
     </div>
-    <div class="our-service">
+    <div class="our-service" id="services">
       <div class="our-service__inner-wrapper">
         <div class="our-service__left-column">
           <div class="our-services">
@@ -92,12 +94,12 @@
         </div>
         <div class="our-services__right-column">
           <h2 class="our-services__caption caption">Our Services</h2>
-          <img src="images/3.png" alt="" class="pomidorki">
+          <img src="images/3.png" alt="" class="tomato">
         </div>
       </div>
     </div>
-    <div class="gallery">
-      <h2 class="caption">Gallery</h2>
+    <div class="gallery" id="gallery">
+      <h2 class="caption gallery-caption">Gallery</h2>
       <p class="gallery__text">Consectetur adipisicing elit, sed do
       eiusmod tempor incididunt ut labore et dolore <br> magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -140,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="blog">
+    <div class="blog" id="blog">
       <div class="blog__inner-wrapper">
         <h2 class="blog__caption caption">blog</h2>
         <p class="blog__text">Dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -191,7 +193,7 @@
         <button type="button" name="button" class="view-blog">view more</button>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="inner-wrapper">
         <h2 class="contact__caption caption">Contact</h2>
         <p class="contact__text">For new project, business ideas, or anything
@@ -221,7 +223,7 @@
     <footer class="rights">
       © 2015 Company. All right reserved.
       <span class="footer__logo">Cahee</span>
-      <span class="right-footer">Made with <i class="love">love</i> by Me </span>
+      <span class="right-footer">Made with <span class="love">love</span> by Me </span>
     </footer>
   </body>
 </html>

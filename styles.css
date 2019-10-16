@@ -2,6 +2,8 @@ body, html{
   margin:0;
   padding:0;
   font-family: "Raleway";
+  scroll-behavior: smooth;
+  width:100%;
 }
 
 .header{
@@ -30,11 +32,11 @@ body, html{
 
 .nav__link{
   height: 15px;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 25px;
     color: #262626;
     font-family: "Raleway";
-    font-weight: 900;
+    font-weight: bold;
     margin-right: 20px;
     text-decoration: none;
     text-transform: capitalize;
@@ -50,17 +52,31 @@ body, html{
   align-items: flex-end;
 }
 
+.fresh-caption{
+  font-size: 60px;
+  margin:0;
+  font-weight: 900 ;
+}
+
 .fresh-life{
   display: flex;
   flex-direction: column;
   width: 315px;
   height:100%;
   justify-content: center;
+}
 
+.fresh-life__text{
+  font-size: 17px;
+  font-weight: 300;
+  width: 350px;
 }
 
 .get-free{
-  width:150px;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight:300;
+  width:210px;
   text-transform: uppercase;
   background-color:#ff6633;
   color:white;
@@ -79,8 +95,13 @@ body, html{
 }
 
 .mouse-wrapper{
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
   text-align: center;
+  width: 100%;
+  position: fixed;
+  border: none;
+  margin-left: -10%;
+  z-index: 10;
 }
 
 
@@ -88,6 +109,10 @@ body, html{
   display: flex;
   background-image:url("images/About-us__bg.png");
 
+}
+
+.about-caption{
+  font-size: 90px;
 }
 
 .about-us__inner-wrapper{
@@ -104,6 +129,7 @@ body, html{
 
 .about-text{
   font-size: 17px;
+  font-weight: 300;
 }
 
 
@@ -113,20 +139,17 @@ body, html{
   background-image: url("images/our-services-bg.png");
   height:100vh;
   align-items: center;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 
 .our-service__inner-wrapper{
   display: flex;
-  justify-content: space-between;
-  width: 80%
-
+  justify-content: space-around;
+  width: 100%
 }
 
 .our-services{
-  width:360px;
+  width:400px;
   height:100px;
   border:1px solid grey;
   display: flex;
@@ -144,11 +167,15 @@ body, html{
   width:100%;
   display: flex;
   justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
 }
 
 .our-services__logo{
   border-left: 1px solid grey;
   padding: 15px;
+  object-fit: contain;
 }
 
 .logo-first{
@@ -161,15 +188,19 @@ body, html{
 
 .our-services__right-column{
   position: relative;
+  width:550px;
 }
 
 .our-services__caption{
   position: absolute;
-  top:30%;
-  left:10%;
+  top:45%;
+  left:-10%;
   color:white;
-  font-size: 70px;
+  font-size: 90px;
+  margin:0;
+  font-weight:bold;
 }
+
 
 .gallery{
   min-height:100vh;
@@ -179,14 +210,17 @@ body, html{
   padding:50px 0px;
 }
 
-.caption{
-  align-self: center;
-  font-size: 70px;
+.gallery-caption{
+  text-align: center;
+  font-size: 90px;
   margin:0;
+  font-weight: bold ;
 }
 
 .gallery__text{
   text-align: center;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .grid__wrapper{
@@ -253,6 +287,7 @@ body, html{
 .subscribe{
   background-image: url("images/Subscribe-bg.png");
   background-size: cover;
+  background-position: top;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -268,14 +303,20 @@ body, html{
 }
 
 .subscribe-caption{
-text-transform: capitalize;
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.subscribe-text{
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .subscribe-input{
   width:92%;
   padding: 10px;
-  background-color: #77d9d8;
-  border: none;
+  border: 1px solid #262626;
 }
 
 .inputton{
@@ -311,6 +352,15 @@ text-transform: capitalize;
   justify-content: center;
 }
 
+.blog__caption{
+  text-transform: capitalize;
+  padding-bottom: 35px;
+  text-align: center;
+  font-size: 90px;
+  margin:0;
+  font-weight: bold ;
+}
+
 .blog__pictures{
   display:flex;
 }
@@ -318,7 +368,6 @@ text-transform: capitalize;
 .blog__pictures-pic{
   background-image: linear-gradient(to bottom, rgba(120,120,120,0) 0%, rgba(138,138,138,0.12) 12%, rgba(158,158,158,0.25) 25%, rgba(69,69,69,0.67) 67%, rgba(0,0,0,0.67) 67%, rgba(43,43,43,0.67) 67%, rgba(112,112,112,0.68) 68%, rgba(69,69,69,0.68) 68%, rgba(28,28,28,0.7) 70%, rgba(28,28,28,0.99) 99%, rgba(28,28,28,1) 100%), url("images/blog-img1.png");
   height:320px;
-  width:400px;
   padding: 0 20px;
   background-repeat: no-repeat;
   display: flex;
@@ -354,39 +403,43 @@ text-transform: capitalize;
 
 .date{
   position: absolute;
-  left:30px;
   top:30px;
   border-radius: 10px;
-  padding: 5px;
-  border: 1px solid grey;
+  padding:0 5px;
   text-align: center;
   background-color:rgba(0, 0, 0, 0.15);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.footer{
+  font-size: 17px;
+  font-weight: 100;
 }
 
 .card-wrapper{
   padding-bottom: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .blog__caption , .blog__text{
   text-align: center;
 }
 
-.blog__caption{
-  text-transform: capitalize;
-  padding-bottom: 35px;
-}
+
 
 .blog__text{
-  font-weight: 400;
-  width:60%;
+  font-weight: 300;
+  width:65%;
   margin: 0 auto;
   padding-bottom: 30px;
   line-height: 25px;
+  font-size: 17px;
 }
 
 .card-heading{
   font-weight: bold;
+  font-size: 20px;
 }
 
 .view-blog{
@@ -420,10 +473,15 @@ text-transform: capitalize;
 }
 
 .contact__caption{
-  font-size: 70px;
+  text-align: center;
+  font-size: 90px;
+  margin:0;
+  font-weight: bold ;
 }
 
 .contact__text{
+  font-size: 17px;
+  font-weight: 300;
   margin-bottom: 30px;
 }
 
@@ -451,6 +509,7 @@ text-transform: capitalize;
   transition-duration: 0.4s;
   color:navy;
   background-color: #00c4c4;
+  outline: none;
 }
 
 .input:hover{
@@ -475,6 +534,11 @@ text-transform: capitalize;
   padding-bottom: 20px;
 }
 
+.data__text{
+  font-size: 17px;
+  font-weight: 300;
+}
+
 .rights{
   background-color: black;
   padding: 20px 10%;
@@ -494,4 +558,92 @@ text-transform: capitalize;
 
 .love{
   color:red;
+}
+
+
+
+
+
+
+
+
+.big-pic , .tomato{
+  width:40vw;
+}
+
+
+.our-services{
+  width:33vw;
+}
+
+.our-services__caption{
+  font-size: 8vw;
+}
+
+.our-services__right-column{
+  width:45vw;
+
+}
+@media screen and (max-width:700px){
+ .our-services__logo{
+   display: none;
+ }
+
+ .about-us__inner-wrapper{
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+ }
+
+  .rights{
+    padding:20px 5%;
+  }
+
+}
+
+
+
+
+
+
+@media screen and (max-width:600px){
+
+ /* .blog__pictures{
+   flex-direction: column;
+ } */
+   .blog__text{
+     display: none;
+   }
+
+   .blog__inner-wrapper{
+     justify-content: space-between;
+     width:100%;
+   }
+
+   .blog__pictures{
+     /* margin-left: 40px; */
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+
+   .blog__pictures-pic{
+     width:20vw;
+     height:35vh;
+   }
+
+   .date{
+     font-size: 20px;
+   }
+
+   .card-heading{
+     font-size: 14px;
+   }
+
+   .footer{
+     font-size: 12px;
+   }
+
+   .subscribe{
+     margin-bottom: 30px;
+   }
 }
