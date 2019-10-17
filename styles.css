@@ -23,23 +23,24 @@ body, html{
 
 .header__logo{
   font-size: 40px;
-    line-height: 25px;
-    color: #262626;
-    font-family: "Pacifico";
-    font-weight: 400;
-    padding-top: 40px;
+  line-height: 25px;
+  color: #262626;
+  font-family: "Pacifico";
+  font-weight: 400;
+  padding-top: 40px;
 }
 
 .nav__link{
+  padding: 3px 0px;
   height: 15px;
-    font-size: 16px;
-    line-height: 25px;
-    color: #262626;
-    font-family: "Raleway";
-    font-weight: bold;
-    margin-right: 20px;
-    text-decoration: none;
-    text-transform: capitalize;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262626;
+  font-family: "Raleway";
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .nav__link:hover{
@@ -100,7 +101,7 @@ body, html{
   width: 100%;
   position: fixed;
   border: none;
-  margin-left: -10%;
+  margin-left: -5%;
   z-index: 10;
 }
 
@@ -113,6 +114,8 @@ body, html{
 
 .about-caption{
   font-size: 90px;
+  text-align: center;
+  margin:20px 0px;
 }
 
 .about-us__inner-wrapper{
@@ -146,6 +149,10 @@ body, html{
   display: flex;
   justify-content: space-around;
   width: 100%
+}
+
+.our-service__left-column{
+  align-self: center;
 }
 
 .our-services{
@@ -187,6 +194,8 @@ body, html{
 }
 
 .our-services__right-column{
+  display: flex;
+  align-items: center;
   position: relative;
   width:550px;
 }
@@ -584,6 +593,10 @@ body, html{
   width:45vw;
 
 }
+
+
+
+
 @media screen and (max-width:700px){
  .our-services__logo{
    display: none;
@@ -599,18 +612,23 @@ body, html{
     padding:20px 5%;
   }
 
-}
+  .header__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10px;
+  }
 
-
-
-
+  .fresh-life__text{
+    width:250px;
+  }
 
 
 @media screen and (max-width:600px){
+    .caption-90px{
+      font-size: 70px;
+    }
 
- /* .blog__pictures{
-   flex-direction: column;
- } */
    .blog__text{
      display: none;
    }
@@ -621,7 +639,6 @@ body, html{
    }
 
    .blog__pictures{
-     /* margin-left: 40px; */
      flex-wrap: wrap;
      justify-content: center;
    }
@@ -629,6 +646,7 @@ body, html{
    .blog__pictures-pic{
      width:20vw;
      height:35vh;
+     background-position: center;
    }
 
    .date{
@@ -646,4 +664,23 @@ body, html{
    .subscribe{
      margin-bottom: 30px;
    }
+
+   .footer__logo{
+     padding:0 20px;
+   }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .fresh-life__text{
+      width:200px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .inner-wrapper{
+      width:90%;
+    }
 }
