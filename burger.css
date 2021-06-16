@@ -1,0 +1,77 @@
+#burger__toggle {
+    opacity: 0;
+}
+@media screen and (max-width: 750px) {
+    .header__nav {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px 30px 40px;
+        transform: translateX(150px);
+        color: white;
+        position: fixed;
+        z-index: 10;
+        transition: .2s;
+    }
+    .nav__link {
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        color: white;
+    }
+    .nav__link:hover {
+        border-top: none;
+        border-bottom: 3px solid red;
+    }
+    #burger__toggle:checked ~ .header__nav {
+        transition: .4s;
+        transform: translateX(0px);
+        background-color: #ff6633;
+    } 
+    .burger__btn {
+        position: fixed;
+        right: 5px;
+        top: 20px;
+        z-index: 11;
+    }
+    .burger__btn > span {
+        display: block;
+        padding: 2px 15px;
+        background-color: #000;
+        position: relative;
+        transition: .2s;
+    }
+    .burger__btn > span::after,
+    .burger__btn > span::before {
+        position: absolute;
+        color: black;
+        content: "";
+        display: block;
+        padding: 2px 15px;
+        right: 0px;
+        background-color: black;
+    }
+    .burger__btn > span::after {
+        top: 8px;
+    }
+    .burger__btn > span::before {
+        top: -8px;
+    }
+    #burger__toggle:checked + .burger__btn > span::after {
+        transform: rotate(90deg);
+        top: 0px;
+        transition: .4s;
+        background-color: #a4a4a4;
+    }
+    #burger__toggle:checked + .burger__btn > span::before {
+        top: 0px;
+        transition: .4s;
+        background-color: #a4a4a4;
+    }
+    #burger__toggle:checked + .burger__btn > span {
+        transform: rotate(45deg);
+        transition: .4s;
+
+    }
+}
