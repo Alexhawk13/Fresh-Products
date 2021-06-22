@@ -6,12 +6,13 @@
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="swiper-bundle.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="burger.css">
 
   </head>
   <body>
-    <div class="header">
+    <div  id="home" class="header">
       <div class="inner-wrapper">
        <header class="header__caption">
          <span class="header__logo">Cahee</span>
@@ -28,7 +29,7 @@
            <a href="#contact" class="nav__link">contact</a>     
          </nav>
        </header>
-       <div class="fresh-life" id="home">
+       <div class="fresh-life">
          <h2 class="fresh-caption">Fresh Life</h2>
          <p class="fresh-life__text">
            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -155,8 +156,9 @@
          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
          consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
         </p>
-          <div class="blog__pictures ">
-            <div class="blog__pictures-pic first">
+        <div class="swiper-container">
+          <div class="blog__pictures swiper-wrapper">
+            <div class="blog__pictures-pic first swiper-slide">
                 <div class="date">
                   20 <br> NOV
                 </div>
@@ -167,9 +169,9 @@
                     <div class="footer">
                       By Ausketeez - 6hours ago
                     </div>
-                 </div>
-               </div>
-            <div class="blog__pictures-pic second">
+                </div>
+            </div>
+            <div class="blog__pictures-pic second swiper-slide">
               <div class="date">
                 14 <br> NOV
               </div>
@@ -182,7 +184,7 @@
                 </div>
               </div>
             </div>
-            <div class="blog__pictures-pic third">
+            <div class="blog__pictures-pic third swiper-slide">
               <div class="date">
                 10 <br> NOV
               </div>
@@ -194,27 +196,31 @@
                   By Ausketeez - 6hours ago
                 </div>
               </div>
+            </div>
+            
           </div>
-        
-       
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <button type="button" name="button" class="view-blog">view more</button>
       </div>
-      <button type="button" name="button" class="view-blog">view more</button>
-    </div>
     </div>
     <div class="contact" id="contact">
       <div class="inner-wrapper">
         <h2 class="contact__caption caption caption-90px">Contact</h2>
         <p class="contact__text">For new project, business ideas, or anything
-           <br>
+          <br>
           you'd like to discuss , contact with me</p>
         <div class="forms-and-data">
           <div class="forms">
             <input type="name" name="" value=""
-             placeholder="Name" class="input">
+            placeholder="Name" class="input">
             <input type="email" name="" value=""
-             placeholder="Your email.." class="input">
+            placeholder="Your email.." class="input">
             <input type="text" name="" value=""
-             placeholder="Your phone number" class="input">
+            placeholder="Your phone number" class="input">
             <textarea name="name" rows="8" cols="80" placeholder="Your message"class="input"></textarea>
           </div>
           <div class="data">
@@ -233,5 +239,7 @@
       <span class="footer__logo">Cahee</span>
       <span class="right-footer">Made with <span class="love">love</span> by Me </span>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
